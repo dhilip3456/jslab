@@ -1,43 +1,44 @@
 File: Main.jsx
-import React from &quot;react&quot;;
-import { createRoot } from &quot;react-dom/client&quot;;
-import App from &quot;./App&quot;;
-import &quot;./index.css&quot;;
-createRoot(document.getElementById(&quot;root&quot;)).render(
-&lt;React.StrictMode&gt;
-&lt;App /&gt;
-&lt;/React.StrictMode&gt;
+
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
+
+createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
+
 
 File: Src/App.jsx
-import { useState } from &quot;react&quot;;
-
+import { useState } from "react";
 function App() {
-const [count, setCount] = useState(0);
-const increment = () =&gt; {
-setCount(count + 1);
-};
-const decrement = () =&gt; {
-setCount(count - 1);
-};
-const reset = () =&gt; {
-setCount(0);
-};
-return (
-&lt;div style={{ textAlign: &quot;center&quot;, marginTop: &quot;50px&quot; }}&gt;
-&lt;h1&gt;React Counter App&lt;/h1&gt;
-&lt;h2&gt;{count}&lt;/h2&gt;
-&lt;button onClick={increment} style={{ margin: &quot;10px&quot; }}&gt;
-Increment
-&lt;/button&gt;
-&lt;button onClick={decrement} style={{ margin: &quot;10px&quot; }}&gt;
-
-Decrement
-&lt;/button&gt;
-&lt;button onClick={reset} style={{ margin: &quot;10px&quot; }}&gt;
-Reset
-&lt;/button&gt;
-&lt;/div&gt;
-);
+  const [count, setCount] = useState(0);
+  const increment = () => {
+    setCount(count + 1);
+  };
+  const decrement = () => {
+    setCount(count - 1);
+  };
+ const reset = () => {
+    setCount(0);
+  };
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>React Counter App</h1>
+      <h2>{count}</h2>
+      <button onClick={increment} style={{ margin: "10px" }}>
+        Increment
+      </button>
+      <button onClick={decrement} style={{ margin: "10px" }}>
+        Decrement
+      </button>
+       <button onClick={reset} style={{ margin: "10px" }}>
+        Reset
+      </button>
+    </div>
+  );
 }
 export default App;
