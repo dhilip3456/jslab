@@ -1,0 +1,43 @@
+File: Main.jsx
+import React from &quot;react&quot;;
+import { createRoot } from &quot;react-dom/client&quot;;
+import App from &quot;./App&quot;;
+import &quot;./index.css&quot;;
+createRoot(document.getElementById(&quot;root&quot;)).render(
+&lt;React.StrictMode&gt;
+&lt;App /&gt;
+&lt;/React.StrictMode&gt;
+);
+
+File: Src/App.jsx
+import { useState } from &quot;react&quot;;
+
+function App() {
+const [count, setCount] = useState(0);
+const increment = () =&gt; {
+setCount(count + 1);
+};
+const decrement = () =&gt; {
+setCount(count - 1);
+};
+const reset = () =&gt; {
+setCount(0);
+};
+return (
+&lt;div style={{ textAlign: &quot;center&quot;, marginTop: &quot;50px&quot; }}&gt;
+&lt;h1&gt;React Counter App&lt;/h1&gt;
+&lt;h2&gt;{count}&lt;/h2&gt;
+&lt;button onClick={increment} style={{ margin: &quot;10px&quot; }}&gt;
+Increment
+&lt;/button&gt;
+&lt;button onClick={decrement} style={{ margin: &quot;10px&quot; }}&gt;
+
+Decrement
+&lt;/button&gt;
+&lt;button onClick={reset} style={{ margin: &quot;10px&quot; }}&gt;
+Reset
+&lt;/button&gt;
+&lt;/div&gt;
+);
+}
+export default App;
