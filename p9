@@ -27,7 +27,7 @@ function Tabs() {
         <button
           style={activeTab === "contact" ? styles.activeBtn : styles.btn}
           onClick={() => setActiveTab("co…
-[12:26 pm, 24/03/2026] Dhilip G: File: src/App.jsx
+ File: src/App.jsx
 import { useState } from "react";
 export default function App() {
   const [isDark, setIsDark] = useState(false);
